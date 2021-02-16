@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+Karyna Kazhamiakina
+WEB 235
+Module 3 Lab 1
+06feb2021
+-->
+<meta charset="UTF-8">
+<title>Introducing Events</title>
+<link href="../mod3-Lab2-(chapter5)/site.css" rel="stylesheet">
+<script src="../mod3-Lab2-(chapter5)/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+	$('html').dblclick(function() {
+		alert('ouch');
+	});
+	$('a').mouseover(function() {
+		var message = "<p>You moused over a link</p>";
+		$('.main').append(message);
+	});
+	$('#button').click(function() {
+		$(this).val("Stop that!");
+	});
+	$('#textfield').focus(function() {
+		$(this).css('background-color','red');
+	}); 
+});
+</script>
+</head>
+<body id="events">
+<div class="wrapper">
+	<header>
+	    JAVASCRIPT <span class="amp">&amp;</span> jQUERY: THE&nbsp;MISSING&nbsp;MANUAL
+	</header>
+	<div class="content">
+		<div class="main">
+	<h1>Introducing Events</h1>
+	<p><a href="#">A Link</a></p>
+	<form action="#" method="get">
+	<fieldset><legend>A Form</legend><p><input name="button" type="button" id="button" value="A Button"></p>
+	<p><input name="textfield" id="textfield" type="text"></p></fieldset>
+	</form>
+	</div>
+</div>
+<footer>
+	<p>JavaScript &amp; jQuery: The Missing Manual, 3rd Edition, by <a href="http://sawmac.com/">David McFarland</a>. Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>
+</footer>
+</div>
+</body>
+</html>
